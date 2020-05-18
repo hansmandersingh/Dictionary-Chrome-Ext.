@@ -24,9 +24,11 @@ function printing(data) {
   let message = `Word : ${firstWord.word}`;
 
   message += newLine;
+  message += newLine;
   message += `Definition: ${firstWord.definition}`;
   message += newLine;
-  message += `Example: ${firstWord.example}`
+  message += newLine;
+  message += `Example: ${firstWord.example}`;
   message += newLine;
   alert(message);
 }
