@@ -3,7 +3,6 @@ chrome.contextMenus.create({
   'contexts': ['selection'],
   'onclick': (context) => {
     const word = context.selectionText;
-    const newLine = "\r\n";
 
     fetch(`https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=${word}`, {
       "method": "GET",
@@ -14,10 +13,20 @@ chrome.contextMenus.create({
     })
     .then(data => data.json())
     .then(json => {
-      console.log(json)
+      printing(json)
     })
   }
 })
 
 function printing(data) {
+  let firstWord = data.list[0];
+  const newLine = "\r\n";
+  let message = `Word : ${firstWord.word}`;
+
+  message += newLine;
+  message += `Definition: ${firstWord.definition}`;
+  message += newLine;
+  message += `Example: ${firstWord.example}`
+  message += newLine;
+  alert(message);
 }
