@@ -9,3 +9,7 @@ Chrome extension to search for any highlighted word's meaning.
 1. Click load Unpacked and locate this folder which you cloned.
 1. Open this folder not the file.
 1. Now go to any page and highlight the word and right click it and you will see the definition and example of the word.
+
+## Warning:
+
+### Sometimes words can be offesnsive
